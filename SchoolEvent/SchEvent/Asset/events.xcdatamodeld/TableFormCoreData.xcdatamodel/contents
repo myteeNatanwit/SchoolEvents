@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="belongTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="category" inverseEntity="Event" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distance" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fee" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="belongTo" inverseEntity="Category" syncable="YES"/>
+        <relationship name="organiserBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Organiser" inverseName="organise" inverseEntity="Organiser" syncable="YES"/>
+        <relationship name="paticipateBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participant" inverseName="paticipate" inverseEntity="Participant" syncable="YES"/>
+        <relationship name="payment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payment" inverseName="payFor" inverseEntity="Payment" syncable="YES"/>
+    </entity>
+    <entity name="Organiser" representedClassName="Organiser" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="role" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="organise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="organiserBy" inverseEntity="Event" syncable="YES"/>
+    </entity>
+    <entity name="Participant" representedClassName="Participant" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="role" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="canBe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" syncable="YES"/>
+        <relationship name="parentOf" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" syncable="YES"/>
+        <relationship name="paticipate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="paticipateBy" inverseEntity="Event" syncable="YES"/>
+    </entity>
+    <entity name="Payment" representedClassName="Payment" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="withPermission" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="paidBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participant" syncable="YES"/>
+        <relationship name="payFor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="payment" inverseEntity="Event" syncable="YES"/>
+    </entity>
+    <entity name="School" representedClassName="School" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasMany" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="studyAt" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ofClass" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ofYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="school" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eventing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participant" syncable="YES"/>
+        <relationship name="studyAt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="School" inverseName="hasMany" inverseEntity="School" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-515" positionY="168" width="128" height="73"/>
+        <element name="Event" positionX="-65" positionY="-0" width="128" height="255"/>
+        <element name="Organiser" positionX="-288" positionY="-33" width="128" height="118"/>
+        <element name="Participant" positionX="-308" positionY="252" width="128" height="118"/>
+        <element name="Payment" positionX="-533" positionY="-27" width="128" height="118"/>
+        <element name="School" positionX="-308" positionY="405" width="128" height="120"/>
+        <element name="Student" positionX="-81" positionY="276" width="128" height="135"/>
+    </elements>
+</model>
