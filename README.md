@@ -14,7 +14,7 @@ Swift and School Event using DataModule for offline/online sync<br>
 # Instruction
 1-	Decompress zipfile in mac, load Xcodeproj file.<br>
 2-	First time, it will generate dummy data. User can add/delete the events with swipe to left.<br>
-3-	Search feature works in eventlist description, location selection and category screen.<br>
+3-	Search feature works in eventlist description, location selection and category screens.<br>
 
 # Next version
 1-	School add feature. User as admin can add own school.<br>
