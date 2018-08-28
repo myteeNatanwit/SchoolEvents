@@ -12,7 +12,7 @@ Swift and School Event using DataModule for offline/online sync<br>
 # ER Diagram
 ![](https://github.com/myteeNatanwit/SchoolEvents/raw/master/er3.PNG)
 # Instruction
-1-	decompress zipfile in mac, load Xcodeproj file.<br>
+1-	Decompress zipfile in mac, load Xcodeproj file.<br>
 2-	First time, it will generate dummy data. User can add/delete the events with swipe to left.<br>
 3-	Search feature works in eventlist description, location selection and category screen.<br>
 
