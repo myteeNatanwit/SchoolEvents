@@ -34,6 +34,10 @@
 		8494FB062131877000601072 /* PickMany.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8494FB052131877000601072 /* PickMany.storyboard */; };
 		8494FB082131880C00601072 /* PickManyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494FB072131880C00601072 /* PickManyVC.swift */; };
 		8494FB0A213188B000601072 /* PickManyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494FB09213188B000601072 /* PickManyCell.swift */; };
+		84EE33DD21363BBF00099B84 /* ParticipateVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EE33DC21363BBF00099B84 /* ParticipateVC.storyboard */; };
+		84EE33E221363CD000099B84 /* OrganiserVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EE33E121363CD000099B84 /* OrganiserVC.storyboard */; };
+		84EE33E421363CF300099B84 /* OrganiserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE33E321363CF300099B84 /* OrganiserVC.swift */; };
+		84EE33E72136705500099B84 /* ParticipateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE33E62136705500099B84 /* ParticipateVC.swift */; };
 		C4AA362E1E0E13A000DE41B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA362D1E0E13A000DE41B4 /* AppDelegate.swift */; };
 		C4AA36301E0E13A000DE41B4 /* EventListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA362F1E0E13A000DE41B4 /* EventListVC.swift */; };
 		C4AA36331E0E13A000DE41B4 /* EventList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AA36311E0E13A000DE41B4 /* EventList.storyboard */; };
@@ -70,6 +74,10 @@
 		8494FB052131877000601072 /* PickMany.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickMany.storyboard; sourceTree = "<group>"; };
 		8494FB072131880C00601072 /* PickManyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickManyVC.swift; sourceTree = "<group>"; };
 		8494FB09213188B000601072 /* PickManyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickManyCell.swift; sourceTree = "<group>"; };
+		84EE33DC21363BBF00099B84 /* ParticipateVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParticipateVC.storyboard; sourceTree = "<group>"; };
+		84EE33E121363CD000099B84 /* OrganiserVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrganiserVC.storyboard; sourceTree = "<group>"; };
+		84EE33E321363CF300099B84 /* OrganiserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganiserVC.swift; sourceTree = "<group>"; };
+		84EE33E62136705500099B84 /* ParticipateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateVC.swift; sourceTree = "<group>"; };
 		C4AA362A1E0E13A000DE41B4 /* SchoolEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AA362D1E0E13A000DE41B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4AA362F1E0E13A000DE41B4 /* EventListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListVC.swift; sourceTree = "<group>"; };
@@ -188,6 +196,24 @@
 			path = pickMany;
 			sourceTree = "<group>";
 		};
+		84EE33E021363CA400099B84 /* Participate */ = {
+			isa = PBXGroup;
+			children = (
+				84EE33E62136705500099B84 /* ParticipateVC.swift */,
+				84EE33DC21363BBF00099B84 /* ParticipateVC.storyboard */,
+			);
+			path = Participate;
+			sourceTree = "<group>";
+		};
+		84EE33E521363CFA00099B84 /* Organiser */ = {
+			isa = PBXGroup;
+			children = (
+				84EE33E121363CD000099B84 /* OrganiserVC.storyboard */,
+				84EE33E321363CF300099B84 /* OrganiserVC.swift */,
+			);
+			path = Organiser;
+			sourceTree = "<group>";
+		};
 		C4AA36211E0E13A000DE41B4 = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +233,8 @@
 		C4AA362C1E0E13A000DE41B4 /* SchEvent */ = {
 			isa = PBXGroup;
 			children = (
+				84EE33E521363CFA00099B84 /* Organiser */,
+				84EE33E021363CA400099B84 /* Participate */,
 				8432D8252132D079003D0D7C /* PickOne */,
 				8494FB0B21318CBE00601072 /* pickMany */,
 				8494FAF9213163D500601072 /* searchVC */,
@@ -280,12 +308,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EE33E221363CD000099B84 /* OrganiserVC.storyboard in Resources */,
 				8494FADC2131093100601072 /* EventItem.storyboard in Resources */,
 				8494FAFF213163D500601072 /* SearchView.storyboard in Resources */,
 				8494FAE021312FD400601072 /* AddSmthng.storyboard in Resources */,
 				C4AA363B1E0E13A000DE41B4 /* LaunchScreen.storyboard in Resources */,
 				C4AA36381E0E13A000DE41B4 /* Assets.xcassets in Resources */,
 				C4AA36331E0E13A000DE41B4 /* EventList.storyboard in Resources */,
+				84EE33DD21363BBF00099B84 /* ParticipateVC.storyboard in Resources */,
 				8432D8222132CCBD003D0D7C /* PickOne.storyboard in Resources */,
 				8494FB062131877000601072 /* PickMany.storyboard in Resources */,
 				8494FB042131663D00601072 /* citylist.json in Resources */,
@@ -302,6 +332,7 @@
 				8494FAF321314CB100601072 /* globalfunc.swift in Sources */,
 				C4AA36301E0E13A000DE41B4 /* EventListVC.swift in Sources */,
 				C4AA365F1E0E144B00DE41B4 /* AddSmthng.swift in Sources */,
+				84EE33E72136705500099B84 /* ParticipateVC.swift in Sources */,
 				8494FAE7213137BE00601072 /* DateTimePicker.swift in Sources */,
 				8494FAD42130F00E00601072 /* events.xcdatamodeld in Sources */,
 				8494FB082131880C00601072 /* PickManyVC.swift in Sources */,
@@ -311,6 +342,7 @@
 				8494FAEB2131418400601072 /* EvenItemExt.swift in Sources */,
 				8494FB00213163D500601072 /* searchData.swift in Sources */,
 				8494FADE21312E0C00601072 /* EventItemTableVC.swift in Sources */,
+				84EE33E421363CF300099B84 /* OrganiserVC.swift in Sources */,
 				8494FAE6213137BE00601072 /* DateCollectionViewCell.swift in Sources */,
 				8494FB0A213188B000601072 /* PickManyCell.swift in Sources */,
 				8494FAF521314CB100601072 /* validation.swift in Sources */,

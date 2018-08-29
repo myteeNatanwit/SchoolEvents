@@ -13,7 +13,15 @@ protocol PickManyDelegate {
 }
 class PickManyVC: UIViewController  {
     @IBAction func addBtnClk(_ sender: Any) {
-        switchViewControllersItem(Name: "AddSmthng");
+        switch editChoice {
+        case editType.organiser:
+            AddOrganiser();
+        case editType.participant:
+            AddParticipant();
+        default:
+            return;
+        }
+   //     switchViewControllersItem(Name: "AddSmthng");
     }
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
