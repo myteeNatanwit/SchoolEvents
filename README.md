@@ -27,7 +27,7 @@ Swift and School Event using DataModule for offline/online sync<br>
 5-	Feedback/msg/phone to organiser from participant.<br>
 6-	Group msg/chat for ppl who participate to the event.<br>
 7-	Login with different roles.<br>
-8- Location on map and direction from phonr gps.
+8- Location on map and direction from phone gps.
 
 
 
