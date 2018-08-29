@@ -1,7 +1,8 @@
 # SchoolEvents
 Swift and School Event using DataModule for offline/online sync<br>
 ## Update/bug fixed
--fixed keyboard not dissmissed.
+-fixed keyboard not dissmissed.<br>
+-added 2 entry screens forOrganiser and Participant.
 ## Notes:
 1-	School preset to Monash uni, Melbourne. Geolocation is school.lat = -37.896751; school.lon = 145.147141. Not yet adding screen for School. Uncertain the purpose.<br>
 2-	Uncertain about payment – it is not yet done. Usually it should be done by admin side? Or participant can choose to pay byself? Then we need server for that purpose.<br>
@@ -21,7 +22,7 @@ Swift and School Event using DataModule for offline/online sync<br>
 # Next version
 1-	School add feature. User as admin can add own school.<br>
 2-	Sync with server, so the work local will b sync with server, so other clients can also access same data. Andoid/web?<br>
-3-	Proper entry screens for Catergory, participate and organiser.<br>
+3-	Proper entry screens for Catergory, participate and organiser.Done.<br>
 4-	Fields validation for entry screens.<br>
 5-	Feedback/msg/phone to organiser from participant.<br>
 6-	Group msg/chat for ppl who participate to the event.<br>
