@@ -25,4 +25,6 @@ Swift and School Event using DataModule for offline/online sync<br>
 6-	Group msg/chat for ppl who participate to the event.<br>
 7-	Login with different roles.<br>
 
+## update
+-fixed keyboard not dissmissed.
 
