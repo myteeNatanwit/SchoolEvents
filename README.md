@@ -1,5 +1,7 @@
 # SchoolEvents
 Swift and School Event using DataModule for offline/online sync<br>
+## Update/bug fixed
+-fixed keyboard not dissmissed.
 ## Notes:
 1-	School preset to Monash uni, Melbourne. Geolocation is school.lat = -37.896751; school.lon = 145.147141. Not yet adding screen for School. Uncertain the purpose.<br>
 2-	Uncertain about payment – it is not yet done. Usually it should be done by admin side? Or participant can choose to pay byself? Then we need server for that purpose.<br>
@@ -25,6 +27,5 @@ Swift and School Event using DataModule for offline/online sync<br>
 6-	Group msg/chat for ppl who participate to the event.<br>
 7-	Login with different roles.<br>
 
-## update
--fixed keyboard not dissmissed.
+
 
