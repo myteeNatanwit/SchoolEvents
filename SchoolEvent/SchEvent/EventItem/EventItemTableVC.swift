@@ -155,6 +155,7 @@ class EventItemTableVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        UIApplication.shared.sendAction("resignFirstResponder", to:nil, from:nil, for:nil)
         print("You selected cell number: \(indexPath.row)!");
         switch indexPath.row {
         case 1:
